@@ -2,7 +2,7 @@ package com.cgi.b3;
 
 public class Student extends Person{
 
-
+    public static String  schoolName = "ABC";
 	private int rollnum;
 	private Week dday;
 
@@ -31,7 +31,7 @@ public class Student extends Person{
 
 	// Method overriding the method of parent class with same name and parameters.
 	String introduce() {
-		return "I am a student My Name is " + name + " Duty day is " + dday;
+		return "I am a student My Name is " + name + " Duty day is " + dday + "school is " + schoolName + "rollnum is"+ rollnum;
 	}
 	
 	
@@ -59,7 +59,9 @@ public class Student extends Person{
 		// int[][][] arr3D ;
 		// int[][][][] arr4D ;
 
-		Student ron = new Student("Ron", 1);
+		Student ron = new Student("Ron", 11);
+		ron.schoolName = "dEF";
+		ron.rollnum = 12;
 		Student simi = new Student("Simi", 2);
 		Student sonu = new Student("Sonu", 3);
 		Student monu = new Student("Monu", 4, Week.SAT);
