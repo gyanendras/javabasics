@@ -5,6 +5,8 @@ public class Student extends Person{
     public static String  schoolName = "ABC";
 	private int rollnum;
 	private Week dday;
+	
+	
 
 	enum Week {
 		MON, TUE, WED, THU, FRI, SAT, SUN
