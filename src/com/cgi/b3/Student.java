@@ -1,6 +1,6 @@
 package com.cgi.b3;
 
-public class Student extends Person{
+public class Student extends Person implements ViralDiseaseChecks{
 
     public static String  schoolName = "ABC";
 	private int rollnum;
@@ -15,17 +15,20 @@ public class Student extends Person{
 	
 	static int[][] game = new int[6][6];
 
-	Student() {
+	Student(String bloodgroup, String birthmark) {
+		super(bloodgroup, birthmark);
 		name = "default";
 		rollnum = 0;
 	}
 
-	Student(String stdname, int rn) {
+	Student(String bloodgroup, String birthmark, String stdname, int rn) {
+		super(bloodgroup, birthmark);
 		name = stdname;
 		rollnum = rn;
 	}
 
-	Student(String stdname, int rn, Week day) {
+	Student(String bloodgroup, String birthmark, String stdname, int rn, Week day) {
+		super(bloodgroup, birthmark);
 		name = stdname;
 		rollnum = rn;
 		dday = day;
@@ -45,6 +48,13 @@ public class Student extends Person{
 	public void printArgs(String... ab) {
 		System.out.println(ab.length + ab[0]);
 	}
+	
+	
+	@Override
+	public String getMedicalInfo() {
+		
+		return bloodgroup +" "+ birthmark ;
+	}
 
 	public static void main(String[] args) {
 
@@ -61,13 +71,13 @@ public class Student extends Person{
 		// int[][][] arr3D ;
 		// int[][][][] arr4D ;
 
-		Student ron = new Student("Ron", 11);
+		Student ron = new Student("O+","moleOnEar","Ron", 11);
 		ron.schoolName = "dEF";
 		ron.rollnum = 12;
-		Student simi = new Student("Simi", 2);
-		Student sonu = new Student("Sonu", 3);
-		Student monu = new Student("Monu", 4, Week.SAT);
-		Student pat = new Student("Pat", 5, Week.MON);
+		Student simi = new Student("O+","moleOnEar","Simi", 2);
+		Student sonu = new Student("O+","moleOnEar","Sonu", 3);
+		Student monu = new Student("O+","moleOnEar", "Monu", 4, Week.SAT);
+		Student pat = new Student("O+","moleOnEar", "Pat", 5, Week.MON);
 
 		Student[] stdArr = { ron, simi, sonu };
 		int sum = 0;
@@ -80,7 +90,7 @@ public class Student extends Person{
 
 		System.out.println("the avg roll num is " + avg);
 
-		Student anony = new Student();
+		Student anony = new Student("O+","moleOnEar");
 
 		String s = ron.introduce();
 
@@ -99,9 +109,25 @@ public class Student extends Person{
 
 		pat.printArgs(s1);
 		pat.printArgs("five", "six", "seven");
+		String password = "he4llO";
+		boolean cond1 = password.matches(".*[A-Z].*");
 		
-	
+		System.out.println(password.matches(".*[A-Z].*"));
+		boolean cond2 = password.matches(".*\\d.*");
+		System.out.println(password.matches(".*\\d.*"));
 
+	}
+
+	@Override
+	public boolean checkForCovid() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean checkforFlu() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
