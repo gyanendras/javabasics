@@ -13,8 +13,17 @@ public class Driver {
 	public static void main(String[] args) {
 		
 		Person p = new Student("sally", 6, Week.WED);
+		Student std = new Student();
 		Person p1 = new Person();
 		Person p2 = new Professor();
+		Object obj = new Person();
+		Object obj2 = new Event();
+		Object obj3 = new String();
+		
+	
+				
+		
+		
 		
 		
 		
@@ -27,12 +36,28 @@ public class Driver {
 		System.out.println(p2.introduce());
 		
 		Event ev1 = new Event();
+		Event ev3 = ev1;
 		System.out.println(ev1.getEventDate());
 		ev1.setEventDate(LocalDate.of(2023, 12, 25));
 		System.out.println(ev1.getEventDate());
 		Event ev2 = new Event("New Year",LocalDate.of(2023, 12, 31), LocalTime.MIDNIGHT);
 		System.out.println(ev2.getEventDate());
-
+		
+		System.out.println(ev2.equals(ev1));
+		System.out.println(ev2 == ev1);
+		
+		System.out.println(ev3.equals(ev1));
+		System.out.println(ev3 == ev1);
+		
+		System.out.println(ev1.hashCode());
+		System.out.println(ev2.hashCode());
+		System.out.println(ev3.hashCode());
+		
+		System.out.println(ev1.toString());
+		System.out.println(ev2.toString());
+		System.out.println(ev3.toString());
+		
+		
 	}
 
 }

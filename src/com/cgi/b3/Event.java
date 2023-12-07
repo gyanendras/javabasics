@@ -42,5 +42,8 @@ public class Event {
 	}
 	
 	
+	public String toString() {
+		return " Name is " + eventName + " \n Date is " + eventDate + "\n time is " + eventTime;
+	}
 
 }

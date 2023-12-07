@@ -42,7 +42,7 @@ public class Student extends Person{
     	return "I am a student My Name is " + name ;
     }
 
-	void printArgs(String... ab) {
+	public void printArgs(String... ab) {
 		System.out.println(ab.length + ab[0]);
 	}
 
