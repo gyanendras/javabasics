@@ -1,5 +1,8 @@
 package com.cgi.b3;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 import javax.sound.midi.Patch;
 
 import com.cgi.b3.Student.Week;
@@ -22,6 +25,13 @@ public class Driver {
 		System.out.println(p1.introduce());
 		System.out.println(p.introduce());
 		System.out.println(p2.introduce());
+		
+		Event ev1 = new Event();
+		System.out.println(ev1.getEventDate());
+		ev1.setEventDate(LocalDate.of(2023, 12, 25));
+		System.out.println(ev1.getEventDate());
+		Event ev2 = new Event("New Year",LocalDate.of(2023, 12, 31), LocalTime.MIDNIGHT);
+		System.out.println(ev2.getEventDate());
 
 	}
 
