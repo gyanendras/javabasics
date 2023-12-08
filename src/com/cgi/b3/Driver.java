@@ -69,6 +69,12 @@ public class Driver {
 		ViralDiseaseChecks vr = new Student("O+","moleOnEar");
 		ViralDiseaseChecks vr1 = new Visitor("O+", "moleOnEar");
 		vr.checkForCovid();
+		
+		Circle c1 = new Circle(2,"Red","paper");
+		Circle c2 = new Circle(2,"Red","cloth");
+		
+		System.out.println(c1==c2);
+		System.out.println(c1.equals(c2));
 
 	}
 }

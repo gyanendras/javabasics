@@ -12,6 +12,11 @@ public class StringManip {
 		StringManip sm = new StringManip();
 		String s5 = new String("student");
 		String s6 = new String("student");
+		StringBuilder sb1 = new StringBuilder("student");
+		StringBuilder sb2 = new StringBuilder("student");
+		sb1.replace(1, 2, "abc");
+		
+		
 		
 		s5 = sm.s4.replace("ent", "ious");
 		s6 = sm.s4.replace("ent", "ious1");
@@ -23,8 +28,11 @@ public class StringManip {
 		+"\n"+s5+s5.hashCode()+"\n"+s6+s6.hashCode()
 		+"\n"+s7+s7.hashCode());
 		
+	System.out.println(sb1.append(sb1.hashCode())+ "\n"+ sb2+sb2.hashCode());
 	
-
+	System.out.println(sm.s1 == sb2.toString());
+	System.out.println(sm.s1.equals(sb2.toString()));
+	System.out.println(sm.s1+" "+sb2.toString());
 	}
 
 }
