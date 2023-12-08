@@ -9,8 +9,14 @@ import com.cgi.b3.Student.Week;
 
 public class Driver {
 	static Student pat = new Student("O+", "moleOnEar", "Pat", 5, Week.MON);
+	static {
+		int x1 =10;
+		System.out.println(x1);
+		
+	}
 
 	public static void main(String[] args) {
+		
 
 		Person p = new Student("O+", "moleOnEar", "sally", 6, Week.WED);
 		Student std = new Student("O+", "moleOnEar");

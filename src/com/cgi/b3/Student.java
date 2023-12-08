@@ -1,10 +1,12 @@
 package com.cgi.b3;
 
-public class Student extends Person implements ViralDiseaseChecks{
+public class Student extends Person implements ViralDiseaseChecks,ExampleMarker{
 
     public static String  schoolName = "ABC";
 	private int rollnum;
 	private Week dday;
+	
+	
 	
 	
 
@@ -62,7 +64,7 @@ public class Student extends Person implements ViralDiseaseChecks{
 
 		for (int j = 0; j < arr2D.length; ++j) {
 			for (int i = 0; i < arr2D[j].length; ++i) {
-
+                if(i==2)continue;
 				System.out.print(" " + arr2D[j][i]);
 
 			}
@@ -115,7 +117,12 @@ public class Student extends Person implements ViralDiseaseChecks{
 		System.out.println(password.matches(".*[A-Z].*"));
 		boolean cond2 = password.matches(".*\\d.*");
 		System.out.println(password.matches(".*\\d.*"));
-
+		
+		Human s11 = new Student("O+","moleOnEar");
+		Visitor vs1 = new Visitor("O+","moleOnEar");
+        if (vs1 instanceof Human ) {
+        	System.out.println("Take some action as per disease check");
+        }
 	}
 
 	@Override
