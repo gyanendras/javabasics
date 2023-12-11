@@ -1,6 +1,6 @@
 package com.cgi.b3;
 
-public class Student extends Person implements ViralDiseaseChecks,ExampleMarker{
+public class Student extends Person implements ViralDiseaseChecks,ExampleMarker,Comparable<Student>{
 
     public static String  schoolName = "ABC";
 	private int rollnum;
@@ -135,6 +135,12 @@ public class Student extends Person implements ViralDiseaseChecks,ExampleMarker{
 	public boolean checkforFlu() {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public int compareTo(Student o) {
+		// TODO Auto-generated method stub
+		return this.name.compareTo(o.name) ;
 	}
 
 }

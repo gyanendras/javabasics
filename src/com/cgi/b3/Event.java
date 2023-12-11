@@ -46,4 +46,52 @@ public class Event {
 		return " Name is " + eventName + " \n Date is " + eventDate + "\n time is " + eventTime;
 	}
 
+	public String getEventName() {
+		return eventName;
+	}
+
+	public void setEventName(String eventName) {
+		this.eventName = eventName;
+	}
+
+	public LocalTime getEventTime() {
+		return eventTime;
+	}
+
+	public void setEventTime(LocalTime eventTime) {
+		this.eventTime = eventTime;
+	}
+
+	public String getVenueName() {
+		return venueName;
+	}
+
+	public void setVenueName(String venueName) {
+		this.venueName = venueName;
+	}
+
+	public int getTotalSeats() {
+		return totalSeats;
+	}
+
+	public void setTotalSeats(int totalSeats) {
+		this.totalSeats = totalSeats;
+	}
+
+	public int getAvailableSeats() {
+		return availableSeats;
+	}
+
+	public void setAvailableSeats(int availableSeats) {
+		this.availableSeats = availableSeats;
+	}
+
+	public float getTicketPrice() {
+		return ticketPrice;
+	}
+
+	public void setTicketPrice(float ticketPrice) {
+		this.ticketPrice = ticketPrice;
+	}
+
 }
