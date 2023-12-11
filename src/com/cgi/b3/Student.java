@@ -1,5 +1,7 @@
 package com.cgi.b3;
 
+import com.cgi.b3.exceptions.NotCheckedForCovidException;
+
 public class Student extends Person implements ViralDiseaseChecks,ExampleMarker,Comparable<Student>{
 
     public static String  schoolName = "ABC";
@@ -126,8 +128,9 @@ public class Student extends Person implements ViralDiseaseChecks,ExampleMarker,
 	}
 
 	@Override
-	public boolean checkForCovid() {
-		// TODO Auto-generated method stub
+	public boolean checkForCovid() throws NotCheckedForCovidException {
+		if(true) throw new NotCheckedForCovidException();
+		if(true) throw new ExamPostPonedExeception("Exam delayed");
 		return false;
 	}
 

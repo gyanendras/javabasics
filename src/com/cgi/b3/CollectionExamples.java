@@ -11,6 +11,7 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
@@ -81,6 +82,16 @@ public class CollectionExamples {
 		for(Event ev:evs) {
 			System.out.println(ev.getEventName());
 		}
+		
+		Set<Entry<Student, Event>> e = mp.entrySet();
+		Iterator<Entry<Student, Event>> it2 = e.iterator();
+		while(it2.hasNext()) {
+		Entry<Student, Event> e1 = it2.next();
+		System.out.println( e1.getKey());
+		System.out.println( e1.getValue());
+		
+		}
+		
 		
 	}
 

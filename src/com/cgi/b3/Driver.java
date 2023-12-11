@@ -6,6 +6,7 @@ import java.time.LocalTime;
 import javax.sound.midi.Patch;
 
 import com.cgi.b3.Student.Week;
+import com.cgi.b3.exceptions.NotCheckedForCovidException;
 
 public class Driver {
 	static Student pat = new Student("O+", "moleOnEar", "Pat", 5, Week.MON);
@@ -60,15 +61,37 @@ public class Driver {
 
 		Visitor per1 = new Visitor("O+", "moleOnEar");
 		int x = per1.MIN_AGE;
-		per1.checkForVaccination();
 		
-		if (per1.checkForCovid()) {// allow permission}
-
+		
+		if(per1.checkForVaccination()) {
+			// throw new Exception();
+		};
+		//  then StopExamRegistration And message to get vacinnation.
+		
+		try {
+		std.checkForCovid();
+		System.out.println("after exception");
+		}catch(NotCheckedForCovidException e){
+			System.out.println("Get checked before exam");
+			// issueTempCard();
+		}finally {
+			System.out.println("This code always get executed");
 		}
 		
+		
+		System.out.println("COntinues after try catch");
 		ViralDiseaseChecks vr = new Student("O+","moleOnEar");
 		ViralDiseaseChecks vr1 = new Visitor("O+", "moleOnEar");
-		vr.checkForCovid();
+		
+		try {
+			vr1.checkForCovid();
+		} catch (NotCheckedForCovidException e) {
+			// handling logic
+			e.printStackTrace();
+		}
+		
+		
+		// 
 		
 		Circle c1 = new Circle(2,"Red","paper");
 		Circle c2 = new Circle(2,"Red","cloth");
