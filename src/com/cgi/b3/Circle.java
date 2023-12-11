@@ -37,15 +37,25 @@ public class Circle {
 		
 	}
 	
-	//if two equal return true then there hashcode be same.
+	//if two equal return true then there hashcode be same/equal.
 	@Override
 	public int hashCode() {
-		return this.r+this.color.length();
+		return this.r*this.r+this.color.length()*31;
 		
-	}
+	}	
 	
 
 	public static void main(String[] args) {
+		
+		
+		
+		
+		//we have to find a way to restrict the values to ASCII RANGE 65-122
+		System.out.println(Math.round(Math.random()*100));
+		
+		Character c1 = (char)Math.round(Math.random()*100);
+		
+		System.out.println(c1);
 		
 		Circle c = new Circle();
 		

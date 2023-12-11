@@ -72,9 +72,21 @@ public class Driver {
 		
 		Circle c1 = new Circle(2,"Red","paper");
 		Circle c2 = new Circle(2,"Red","cloth");
-		
+		System.out.println(c1.hashCode()+" "+c2.hashCode());
 		System.out.println(c1==c2);
 		System.out.println(c1.equals(c2));
 
+		
+		Person[] pArr = new Person[3] ;
+		pArr[0]= p;
+		pArr[1]= p1;
+		pArr[2]= p2;
+		
+		for(int i =0;i<pArr.length;++i) {
+			System.out.println(pArr[i].introduce());
+		}
+		
+		// Lists, Sets, Map(Key, Value)
+		
 	}
 }
