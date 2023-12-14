@@ -5,9 +5,6 @@ import entity.Account;
 import entity.Customer;
 import service.IBankServiceProvider;
 
-/*
- * This is main Bank app class
- */
 public class Bank {
 	IBankServiceProvider ibs = new BankServiceProviderImpl();
 	
