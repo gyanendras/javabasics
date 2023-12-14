@@ -1,7 +1,7 @@
 package com.cgi.b3;
 
 /*
- * Circle this is in branch 1 -1 
+ * Circle this is in master
  */
 public class Circle {
 	private int r;
